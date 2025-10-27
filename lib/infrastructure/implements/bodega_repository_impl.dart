@@ -9,29 +9,29 @@ class BodegaRepositoryImpl implements BodegaRepository {
 
   @override
   Future<List<BodegaEntity>> getBodegas() async {
-    final response = await _api.get('/api/bodegas');
+    final response = await _api.get('/bodegas');
     final List<dynamic> data = response.data;
     return data.map((e) => BodegaEntity.fromJson(e)).toList();
   }
 
   @override
   Future<BodegaEntity> getBodegaById(String id) async {
-    final response = await _api.get('/api/bodegas/$id');
+    final response = await _api.get('/bodegas/$id');
     return BodegaEntity.fromJson(response.data);
   }
 
   @override
   Future<void> createBodega(BodegaEntity bodega) async {
-    await _api.post('/api/bodegas', bodega.toJson()); // ✅ corregido
+    await _api.post('/bodegas', bodega.toJson());
   }
 
   @override
   Future<void> updateBodega(String id, Map<String, dynamic> data) async {
-    await _api.put('/api/bodegas/$id', data); // ✅ corregido
+    await _api.put('/bodegas/$id', data);
   }
 
   @override
   Future<void> deleteBodega(String id) async {
-    await _api.delete('/api/bodegas/$id');
+    await _api.delete('/bodegas/$id');
   }
 }

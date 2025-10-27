@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:genesis_pt3/screens/components/top_bar.dart';
 import 'package:genesis_pt3/screens/inventario/bodegas/bodega_screen.dart';
 import 'package:genesis_pt3/screens/inventario/categorias/categoria_screen.dart';
+import 'package:genesis_pt3/screens/inventario/productos/productos_screen.dart';
 
 class InventarioScreen extends StatefulWidget {
   const InventarioScreen({super.key});
@@ -26,6 +27,11 @@ class _InventarioScreenState extends State<InventarioScreen> {
         context,
         MaterialPageRoute(builder: (_) => const BodegaScreen()),
       );
+    } else if (path.endsWith('/inventario/productos')) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder:(_) => const ProductosScreen()),
+        );
     } else {
       setState(() => currentPath = path);
     }
