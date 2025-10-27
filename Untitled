@@ -1,0 +1,11 @@
+_      MaterialPageRoute(builder: (_) => const CategoriaScreen()),_      Navigator.pushNamed(context, '/inventario/bodegas');_export class BodegaEntity {
+  final String id;
+  final String nombre;
+  final String ubicacion;
+
+  BodegaEntity({
+    required this.id,
+    required this.nombre,
+    required this.ubicacion,
+  });
+}_getCategorias_                      'descripcion': descController.text,
