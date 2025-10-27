@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 class ApiClient {
   final Dio _dio = Dio(
     BaseOptions(
-      baseUrl: 'https://932937d7991e.ngrok-free.app/api',
+      baseUrl: 'https://4524f7dd1f0a.ngrok-free.app/api',
       connectTimeout: const Duration(seconds: 5),
       receiveTimeout: const Duration(seconds: 5),
     ),
